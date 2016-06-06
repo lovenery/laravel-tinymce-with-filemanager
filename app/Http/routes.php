@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/submit', function (\Illuminate\Http\Request $request) {
+    $content = $request->content;
+    return view('output',['content' => $content]);
+});

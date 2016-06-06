@@ -34,28 +34,12 @@
                 font-size: 96px;
             }
         </style>
-        <script src="tinymce/js/tinymce/tinymce.min.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
-                <form method="post" action="/submit">
-                    {{ csrf_field() }}
-                    <textarea id="mytextarea" name="content">Hello, World!</textarea>
-                    <button type="submit" class="btn btn-default">
-                          <i class="fa fa-plus"></i> Submit
-                    </button>
-                </form>
+                <div class="title">{!! $content !!}</div>
             </div>
         </div>
-    <script>
-        var editor_config = {
-          selector: '#mytextarea',
-          path_absolute : "{{ URL::to('/') }}/",
-          relative_urls : false,
-        };
-        tinymce.init(editor_config);
-    </script>
     </body>
 </html>
