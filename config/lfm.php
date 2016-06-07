@@ -10,7 +10,7 @@ return [
     'use_package_routes'    => true,
 
     // For laravel 5.2, please set to ['web', 'auth']
-    'middlewares'           => ['web', 'auth'],//['auth'],
+    'middlewares'           => ['web'],//['auth'],
 
     // Allow multi_user mode or not.
     // If true, laravel-filemanager create private folders for each signed-in user.
@@ -21,8 +21,8 @@ return [
     // NOTE: make sure to use an unique field.
     'user_field'            => 'id',
 
-    'shared_folder_name'    => 'shares',
-    'thumb_folder_name'     => 'thumbs',
+    //'shared_folder_name'    => 'global',
+    //'thumb_folder_name'     => 'thumbs',
 
     'images_dir'            => 'public/photos/',
     'images_url'            => '/photos/',

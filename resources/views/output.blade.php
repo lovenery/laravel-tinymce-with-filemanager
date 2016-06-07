@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Laravel</title>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <!-- Latest compiled and minified CSS -->
@@ -49,7 +49,14 @@
             <div class="content">
                 <div class="title">{!! $content !!}</div>
                 <button class="btn btn-info btn-large" onclick="history.back()"><span class="glyphicon glyphicon-arrow-left"></span>  Back</button>
+                <a class="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-danger">
+                    Choose From File System
+                </a>
             </div>
         </div>
+        <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
+        <script type="text/javascript">
+          $('.lfm').filemanager('image');
+        </script>
     </body>
 </html>
